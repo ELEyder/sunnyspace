@@ -1,9 +1,9 @@
 import './Nav.css'
 import { Link } from 'react-router-dom';
-import { UserLogin } from '../interfaces/UserLogin';
+import type { IUserLogin } from '../../interfaces/IUserLogin';
 
 interface NavProps {
-  userLogin: UserLogin;
+  userLogin: IUserLogin;
 }
 
 export default function Nav( { userLogin }  : NavProps ) {

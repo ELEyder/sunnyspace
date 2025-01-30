@@ -1,49 +1,29 @@
-import './page.css';
-import '../../post.css';
-import '../../comment.css';
+import './Post.css';
+import type { IPost } from "../../interfaces/IPost";
 
-export default function Profile() {
-  return (
-    <main>
-        <section className="profile">
-            <div className="your-profile">
-                <div className="avatar">
-                    <img src="{{ userData.urlAvatar }}" alt="avatar" className="avatar"/>
-                </div>
-                <h1 className="profile"> userData.firstName </h1>
-                <h2 className="profile"> userData.username</h2>
-                <p className="profile"> userData.email </p>
-            </div>
-            <div className="my-friends">
-                <h1>Friends</h1>
-                <a className="friend" href="{% url 'viewUser' username=friend.username %}">
-                    <div className="friend">
-                        <div className="avatar-icon friend-icon">
-                            <img src="/img/favicon.jpg" alt="avatar" className="avatar-icon"/>
-                        </div>
-                        <p> friend.firstName friend.lastName </p>
-                    </div>
-                </a>
-            </div>
-        </section>
-        <section className="posts">
+interface PostProps {
+    post: IPost,
+}
+
+export default function Post({ post } : PostProps) {
+    return (
+        <>
             <div className="post">
                 <div className="post-header">
                     <a href="{% url 'viewUser' username=post.authorUsername %}">
                         <div className="avatar-icon">
-                            <img src="/img/favicon.jpg" alt="avatar" className="avatar-icon"/>
-                            </div>
+                            <img src="img/favicon.jpg" alt="avatar" className="avatar-icon"/></div>
                     </a>
                     <div>
-                        <a href="{% url 'viewUser' username=post.authorUsername %}" className="author-name"> post.authorName </a> <a href=""> post.action </a>
-                        <p className="post"> post.date </p>
+                        <a href="{% url 'viewUser' username=post.authorUsername %}" className="author-name"> {post.author} </a> <a href=""> post.action </a>
+                        <p className="post"> post.date -  post.privacy </p>
                     </div>
                 </div>
                 <div className="post-main">
-                    <p className="content"> post.content </p>
+                    <p className="content">post.content</p>
                 </div>
                 <div className="post-media">
-                        <img src="/img/favicon.jpg" alt="" className="media"/>
+                        <img src="img/favicon.jpg" alt="" className="media"/>
                         <video controls className="media">
                             <source className="media" src="{{ post.urlMedia }}" type="video/mp4"/>
                             <source className="media" src="{{ post.urlMedia }}" type="video/avi"/>
@@ -51,8 +31,8 @@ export default function Profile() {
                         </video>
                 </div>
                 <div className="post-options">
-                    <a className="btn-post-option {{ post.likeStatus }}" >Likes: post.likes</a>
-                    <a className="btn-post-option">Comment</a>
+                    <a className="btn-post-option {{ post.likeStatus }}" onClick={() => console.log("like(this);")}>Likes: post.likes</a>
+                    <a className="btn-post-option" onClick={() => console.log("goComment") }>Comment</a>
                     <a className="btn-post-option"href="#">Searchs:  post.searchs </a>
                 </div>
                 <div className="comments">
@@ -60,13 +40,13 @@ export default function Profile() {
                         <div className="comment-header">
                             <a href="{% url 'viewUser' username=comment.authorUsername %}">
                                 <div className="avatar-icon-comment">
-                                    <img src="{{ comment.authorAvatar }}" alt="avatar" className="avatar-icon-comment"/>
+                                    <img src="img/favicon.jpg" alt="avatar" className="avatar-icon-comment"/>
                                 </div>
                             </a>
                         </div>
                         <div className="comment-body">
-                                <a href="{% url 'viewUser' username=comment.authorUsername %}" className="author-name"> comment.authorName </a>
-                                <p className="content"> comment.content </p>
+                            <a href="{% url 'viewUser' username=comment.authorUsername %}" className="author-name"> comment.authorName </a>
+                            <p className="content"> comment.content </p>
                         </div>
                     </div>
                 </div>
@@ -79,9 +59,9 @@ export default function Profile() {
                         </svg>
                     </button>
                 </form>
+            <audio id="like-mp3" src="audio/like.mp3"></audio>
+
             </div>
-            <audio id="like-mp3" src="{% static 'audio/like.mp3' %}"></audio>
-        </section>
-    </main>
-  )
-} 
+        </>
+    );
+}

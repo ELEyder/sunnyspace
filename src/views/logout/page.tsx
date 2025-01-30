@@ -1,6 +1,6 @@
-import { redirect } from 'next/navigation';
 
 export default function Logout() {
-  redirect('/');
-  return null;
+  return (
+    "Hello Tilin"
+  )
 }

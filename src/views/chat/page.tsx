@@ -1,7 +1,5 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import './page.css'
-
+import { Link } from 'react-router-dom'
 export default function Chat() {
     return (
         <main>
@@ -18,7 +16,7 @@ export default function Chat() {
                     </div>
                     <div id="addChat" className="friend-chat" >
                         <div className="avatar-icon">
-                            <Image src="/img/favicon.jpg" alt="avatar" className="avatar-icon" />
+                            <img src="/img/favicon.jpg" alt="avatar" className="avatar-icon" />
                         </div>
                         <h2> friend.firstName  friend.lastName </h2>
                     </div>
@@ -33,7 +31,7 @@ export default function Chat() {
                             <path d="M12 18V6" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </a>
-                    <Link href="/">
+                    <Link to="/">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.00002 15.3802H13.92C15.62 15.3802 17 14.0002 17 12.3002C17 10.6002 15.62 9.22021 13.92 9.22021H7.15002" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M8.57 10.7701L7 9.19012L8.57 7.62012" strokeLinecap="round" strokeLinejoin="round" />

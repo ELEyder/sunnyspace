@@ -1,6 +1,3 @@
-'use client';
-
-import Image from "next/image";
 import './page.css';
 import './post.css';
 import './comment.css';
@@ -21,7 +18,7 @@ export default function Home() {
                 <div className="post-header">
                     <a href="{% url 'viewUser' username=post.authorUsername %}">
                         <div className="avatar-icon">
-                            <Image src="/img/favicon.jpg" alt="avatar" className="avatar-icon"/></div>
+                            <img src="/img/favicon.jpg" alt="avatar" className="avatar-icon"/></div>
                     </a>
                     <div>
                         <a href="{% url 'viewUser' username=post.authorUsername %}" className="author-name"> post.authorName </a> <a href=""> post.action </a>
@@ -32,7 +29,7 @@ export default function Home() {
                     <p className="content">post.content</p>
                 </div>
                 <div className="post-media">
-                        <Image src="/img/favicon.jpg" alt="" className="media"/>
+                        <img src="/img/favicon.jpg" alt="" className="media"/>
                         <video controls className="media">
                             <source className="media" src="{{ post.urlMedia }}" type="video/mp4"/>
                             <source className="media" src="{{ post.urlMedia }}" type="video/avi"/>
@@ -49,7 +46,7 @@ export default function Home() {
                         <div className="comment-header">
                             <a href="{% url 'viewUser' username=comment.authorUsername %}">
                                 <div className="avatar-icon-comment">
-                                    <Image src="/img/favicon.jpg" alt="avatar" className="avatar-icon-comment"/>
+                                    <img src="/img/favicon.jpg" alt="avatar" className="avatar-icon-comment"/>
                                 </div>
                             </a>
                         </div>
@@ -76,7 +73,7 @@ export default function Home() {
                 <div className="usuario">
                     <a className="default-user-state" href="{% url 'viewUser' username=user.username %}">
                         <div className="avatar-icon">
-                            <Image src="/img/favicon.jpg"  alt="avatar" className="avatar-icon"/>
+                            <img src="/img/favicon.jpg"  alt="avatar" className="avatar-icon"/>
                         </div>
                         <div className="state default-user">
                             <div className="state-circle default-user {{user.status}}"></div>
