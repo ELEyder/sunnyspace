@@ -1,4 +1,4 @@
-import './Post.css';
+import './FormPost.css';
 
 export default function FormPost() {
     return (

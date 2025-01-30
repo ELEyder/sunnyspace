@@ -1,8 +1,8 @@
-import './page.css'
+import './index.css'
 import { Link } from 'react-router-dom'
 export default function Chat() {
     return (
-        <main>
+        <main className="my-chats">
             <div className="overlay" id="overlay">
                 <div className="modal">
                     <div className="modal-header">

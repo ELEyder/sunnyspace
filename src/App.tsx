@@ -1,17 +1,22 @@
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Route,
   Routes,
 } from "react-router-dom";
 import Home from './views/Home';
+import Chat from "./views/chat";
+import Layout from "./Layout";
 
 function App() {
   return (
-    <Router basename="/sunnyspace">
+    <BrowserRouter basename="/sunnyspace/">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route element={<Layout />} >
+            <Route path="/" element={<Home />} />
+          </Route>
+          <Route path="/chat" element={<Chat />} />
         </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
