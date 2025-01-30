@@ -1,5 +1,4 @@
 import './index.css';
-import Nav from '../../components/Nav/Nav';
 import Post from '../../components/Post/Post';
 import FormPost from '../../components/FormPost/FormPost';
 import type { IPost } from '../../interfaces/IPost';

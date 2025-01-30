@@ -18,7 +18,7 @@ export default function Nav( { userLogin }  : NavProps ) {
           <input className="logo" type="text" placeholder="Search in SunnySpace" />
         </div>
         <div className="info-user">
-          <Link to="/user/profile">
+          <Link to="/profile">
             <div className="avatar-icon">
               <img src={ userLogin.urlAvatar } alt="avatar" className="avatar-icon" />
             </div>
@@ -30,7 +30,7 @@ export default function Nav( { userLogin }  : NavProps ) {
             </div>
           </div>
         </div>
-        <Link to="/user/config">
+        <Link to="/config">
           <button className="btn-header">
             <svg className="logout" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="12" cy="12" r="3" strokeWidth="2" />
