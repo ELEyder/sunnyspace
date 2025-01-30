@@ -15,7 +15,7 @@ export default function Nav( { userLogin }  : NavProps ) {
               <img src="img/favicon.ico" alt="avatar" className="logo" />
             </div>
           </Link>
-          <input className="logo" type="text" placeholder="Search in Senatinet" />
+          <input className="logo" type="text" placeholder="Search in SunnySpace" />
         </div>
         <div className="info-user">
           <Link to="/user/profile">

@@ -25,47 +25,6 @@ section.users:hover {
   overflow-x: hidden; /* Solo desplazamiento vertical */
 }
 
-div.usuario {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-}
-a.usuario {
-  width: 150px;
-  margin: 0px;
-  margin-right: 10px;
-}
-.btnAgregarAmigo {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  font-family: var(--poppins);
-  font-weight: 500;
-  text-decoration: none;
-  padding: 10px 15px 10px 15px;
-  border-radius: 10px;
-  border: 0px solid transparent;
-  cursor: pointer;
-}
-
-.btnAgregarAmigo:hover {
-  background-color: var(--color-primary);
-  color: white;
-}
-.default-user-state{
-  position: relative;
-}
-.state .default-user {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-right: 10px;
-}
-.state-circle.default-user {
-  width: 15px;
-  height: 15px;
-}
-
-
 div.avatar-icon {
   background-color: white;
   width: 52px;
