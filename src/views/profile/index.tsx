@@ -25,7 +25,7 @@ export default function Profile() {
         <section className="profile">
             <div className="your-profile">
                 <div className="avatar">
-                    <img src="{{ userData.urlAvatar }}" alt="avatar" className="avatar"/>
+                    <img src="img/favicon.jpg" alt="avatar" className="avatar"/>
                 </div>
                 <h1 className="profile"> userData.firstName </h1>
                 <h2 className="profile"> userData.username</h2>
@@ -36,7 +36,7 @@ export default function Profile() {
                 <a className="friend" href="{% url 'viewUser' username=friend.username %}">
                     <div className="friend">
                         <div className="avatar-icon friend-icon">
-                            <img src="/img/favicon.jpg" alt="avatar" className="avatar-icon"/>
+                            <img src="img/favicon.jpg" alt="avatar" className="avatar-icon"/>
                         </div>
                         <p> friend.firstName friend.lastName </p>
                     </div>
