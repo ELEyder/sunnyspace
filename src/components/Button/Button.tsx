@@ -1,14 +1,14 @@
 import './Button.css';
 
 interface ButtonProps {
-  content?: React.ReactNode;
+  children?: React.ReactNode;
   type?: "button" | "submit" | "reset";
   onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ content = 'Botón', type = undefined }) => {
+const Button: React.FC<ButtonProps> = ({ children = 'Botón', type = undefined }) => {
   return (
-    <button type={ type } className="postear">{content}</button>
+    <button type={ type } className="postear">{children}</button>
   )
 }
 

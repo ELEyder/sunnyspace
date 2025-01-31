@@ -7,13 +7,13 @@ export default function FormPost() {
             <form className="postear" encType="multipart/form-data">
                 <input className="content" type="text" name="content" placeholder="¿En que piensas?" maxLength={1000} />
                 <div className="postear-option">
-                    <Button content={
-                        <>
-                            <label htmlFor="media" className="media">Selecciona una foto o Video</label>
-                            <input type="file" name="media" className="media" id="media" accept=".jpg, .gif, .mp4" />
-                        </>
-                    } />
-                    <Button content="Postear" type="submit"/>
+                    <Button>
+                        <label htmlFor="media" className="media">Selecciona una foto o Video</label>
+                        <input type="file" name="media" className="media" id="media" accept=".jpg, .gif, .mp4" />
+                    </Button>
+                    <Button type="submit">
+                        Postear
+                    </Button>
                 </div>
             </form>
         </>

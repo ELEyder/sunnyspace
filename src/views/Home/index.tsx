@@ -55,9 +55,14 @@ export default function Home() {
       <section className="posts">
         <FormPost />
         <Post post={defaultPost} />
+        <Post post={defaultPost} />
+        <Post post={defaultPost} />
       </section>
       <section className="usuarios">
         <div className="users">
+          <CardUser user={exampleUser}/>
+          <CardUser user={exampleUser}/>
+          <CardUser user={exampleUser}/>
           <CardUser user={exampleUser}/>
         </div>
       </section>

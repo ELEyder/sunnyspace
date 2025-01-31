@@ -4,7 +4,7 @@ header {
     background-color: white;
     display: flex;
     align-items:  center;
-    justify-content: center;
+    justify-content: space-around;
     position: sticky;
     top: 0;
     border-bottom: 1px solid #d3d3d3;
@@ -45,10 +45,10 @@ input.logo::placeholder {
 }
 
 div.info-user {
-    margin-left: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 div.avatar-icon {
     background-color: white;
