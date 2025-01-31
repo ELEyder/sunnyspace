@@ -10,19 +10,20 @@ export default function Home() {
 
   const defaultPost: IPost = {
     id: '',
-    author: 'Autor por defecto',
+    author: 'Autor',
+    action: 'se ha unido a Senatinet',
     content: 'Contenido por defecto',
     date: new Date(),
-    likes: 0,
-    likesD: [],
+    likes: 1,
+    likesD: ['0'],
     comments: 0,
     commentsD: [],
     privacy: 'Public',
     privacyD: [],
     searchs: 0,
     searchsD: [],
-    typeMedia: '',
-    urlMedia: ''
+    typeMedia: 'img',
+    urlMedia: 'img/favicon.jpg'
   };
 
   return (

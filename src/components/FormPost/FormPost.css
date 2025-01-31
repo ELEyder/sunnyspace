@@ -57,32 +57,13 @@ input.media {
 label.media {
     width: max-content;
     text-align: center;
-    color: var(--color-dark);
+    /* color: var(--color-dark); */
     padding: 20px;
     border-radius: 10px;
     font-family: var(--poppins);
     cursor: pointer;
 }
 
-label.media:hover {
-    background-color: var(--white-secondary);
-}
-
-button.postear {
-    color: var(--color-primary);
-    background-color: var(--color-secondary);
-    font-family: var(--poppins);
-    font-weight: 500;
-    border: 0px;
-    padding: 10px 20px 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-button.postear:hover {
-    color: white;
-    background-color: var(--color-primary);
-}
 /* ------------------------------------------------------------- POSTS ------------------------------------------------------------- */
 
 div.post {

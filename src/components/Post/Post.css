@@ -45,28 +45,6 @@ input.content::placeholder {
     align-items: center;
     flex-grow: inherit;
 }
-input.media {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-label.media {
-    width: max-content;
-    text-align: center;
-    color: var(--color-dark);
-    padding: 20px;
-    border-radius: 10px;
-    font-family: var(--poppins);
-    cursor: pointer;
-}
-
-label.media:hover {
-    background-color: var(--white-secondary);
-}
 
 button.postear {
     color: var(--color-primary);

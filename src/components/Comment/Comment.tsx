@@ -1,6 +1,12 @@
 import './Comment.css';
 import FormComment from '../FormComment/FormComment';
-export default function Comment() {
+import { IComment } from '../../interfaces/IComment';
+import { Link } from 'react-router-dom';
+
+interface PropsComment {
+    comment: IComment
+}
+export default function Comment({ comment }: PropsComment) {
     return (
         <>
             <FormComment />
@@ -14,10 +20,23 @@ export default function Comment() {
                             </div>
                         </a>
                     </div>
-                    <div className="comment-body">
-                        <a href="{% url 'viewUser' username=comment.authorUsername %}" className="author-name"> comment.authorName </a>
-                        <p className="content"> comment.content </p>
+                    <div className='comment-body'>
+                        <div className="comment-text">
+                            <p className="content"> {comment.content} </p>
+                        </div>
+                        <div className="comment-media">
+                            {comment.typeMedia === "img" ? (
+                                <img src={comment.urlMedia} alt="" className="media" />
+                            ) : comment.typeMedia === "video" ? (
+                                <video controls className="media">
+                                    <source className="media" src={comment.urlMedia} type="video/mp4" />
+                                    <source className="media" src={comment.urlMedia} type="video/avi" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                            ) : null}
+                        </div>
                     </div>
+
                 </div>
             </div>
         </>

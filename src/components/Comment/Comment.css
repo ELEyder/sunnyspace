@@ -26,10 +26,22 @@ img.avatar-icon-comment {
 }
 
 .comment-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.comment-text {
   background-color: var(--white-secondary);
   padding: 10px;
   border-radius: 20px;
   width: 100%;
+}
+
+.comment-media {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .author-name {
