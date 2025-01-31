@@ -6,7 +6,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ children = 'Botón', type = undefined }) => {
+const Button: React.FC<ButtonProps> = ({ type = undefined, children = 'Botón'}) => {
   return (
     <button type={ type } className="postear">{children}</button>
   )

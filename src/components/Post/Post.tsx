@@ -25,10 +25,10 @@ export default function Post({ post } : PostProps) {
                 <div className="post-header">
                     <Link to={`user/@${post.author}`}>
                         <div className="avatar-icon">
-                            <img src={post.urlMedia} alt="avatar" className="avatar-icon"/></div>
+                            <img src={"img/favicon.jpg"} alt="avatar" className="avatar-icon"/></div>
                     </Link>
                     <div>
-                        <a href="{% url 'viewUser' username=post.authorUsername %}" className="author-name"> {post.author} </a> <a href=""> {post.action} </a>
+                        <Link to={`user//@${post.author}`} className="author-name"> {post.author} </Link> <a href=""> {post.action} </a>
                         <p className="post"> { post.date.toLocaleString() } -  {post.privacy} </p>
                     </div>
                 </div>
@@ -36,16 +36,16 @@ export default function Post({ post } : PostProps) {
                     <p className="content"> { post.content }</p>
                 </div>
                 <div className="post-media">
-                        { post. typeMedia === "img" ? (
+                        { post.typeMedia === "img" ? (
                             <img src={ post.urlMedia } alt="" className="media"/>
 
-                        ): (
+                        ): post.typeMedia === "img" ? (
                          <video controls className="media">
                             <source className="media" src={ post.urlMedia } type="video/mp4"/>
                             <source className="media" src={ post.urlMedia } type="video/avi"/>
                             Tu navegador no soporta la reproducción de videos.
                          </video>
-                        )}
+                        ) : null}
                 </div>
                 <div className="post-options">
                     <a className={`btn-post-option ${ post.likesD.includes('0') ? 'active' : 'inactive' }`} onClick={() => console.log("like(this);")}>Likes: {post.likes}</a>
