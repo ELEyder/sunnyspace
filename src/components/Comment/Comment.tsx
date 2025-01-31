@@ -1,7 +1,6 @@
 import './Comment.css';
 import FormComment from '../FormComment/FormComment';
 import { IComment } from '../../interfaces/IComment';
-import { Link } from 'react-router-dom';
 
 interface PropsComment {
     comment: IComment

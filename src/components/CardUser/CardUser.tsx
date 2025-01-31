@@ -1,5 +1,11 @@
+import { IUser } from "../../interfaces/IUser"
+import Button from "../Button/Button"
 import "./CardUser.css"
-export default function CardUser() {
+
+interface PropCardUser {
+  user: IUser
+}
+export default function CardUser({ user }: PropCardUser) {
   return (
     <>
       <div className="usuario">
@@ -11,8 +17,8 @@ export default function CardUser() {
             <div className="state-circle default-user {{user.status}}"></div>
           </div>
         </a>
-        <a href="{% url 'viewUser' username=user.username %}" className="usuario"> user.firstName user.lastName </a>
-        <button className="btnAgregarAmigo {{ user.fStatus }}"> wa </button>
+        <a href="{% url 'viewUser' username=user.username %}" className="usuario"> {user.firstName} {user.lastName} </a>
+        <Button content="Agregar" />
       </div>
     </>
   )
