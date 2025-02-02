@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import './Post.css';
 import type { IPost } from "../../interfaces/IPost";
 import Comment from '../Comment/Comment';
@@ -18,7 +19,17 @@ const comment: IComment = {
     typeMedia: 'img',
     urlMedia: 'img/favicon.jpg'
 }
+
 export default function Post({ post } : PostProps) {
+
+    const audioRef = useRef<HTMLAudioElement>(null);
+
+    const playAudio = () => {
+        if (audioRef.current) {
+            audioRef.current.play();
+        }
+    };
+
     return (
         <>
             <div className="post">
@@ -48,13 +59,13 @@ export default function Post({ post } : PostProps) {
                         ) : null}
                 </div>
                 <div className="post-options">
-                    <a className={`btn-post-option ${ post.likesD.includes('0') ? 'active' : 'inactive' }`} onClick={() => console.log("like(this);")}>Likes: {post.likes}</a>
+                    <a className={`btn-post-option ${ post.likesD.includes('0') ? 'active' : 'inactive' }`} onClick={playAudio}>Likes: {post.likes}</a>
                     <a className="btn-post-option" onClick={() => console.log("goComment") }>Comments: {post.comments}</a>
                     <a className="btn-post-option"href="#">Searchs:  {post.searchs} </a>
                 </div>
                 
 
-            <audio id="like-mp3" src="audio/like.mp3"></audio>
+            <audio ref={audioRef} src="audio/like.mp3"></audio>
             <Comment comment={comment}/>
             </div>
         </>
