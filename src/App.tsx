@@ -5,9 +5,10 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout";
 import Home from './views/Home';
-import Chat from "./views/chat";
-import Config from "./views/config";
-import Profile from "./views/profile";
+import Chat from "./views/Chat";
+import Config from "./views/Config";
+import Profile from "./views/Profile";
+import Login from "./views/Login";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
         </Route>
+        <Route path="/login" element={<Login />} />
         <Route path="/config" element={<Config />} />
         <Route path="/chat" element={<Chat />} />
       </Routes>
