@@ -61,7 +61,7 @@ svg.postear {
   pointer-events: none;
 }
 
-.btn-comment {
+.btn-primary {
   background-color: var(--color-secondary);
   border: 0;
   border-radius: 10px;
@@ -72,11 +72,36 @@ svg.postear {
   cursor: pointer;
 }
 
-.btn-comment:hover {
+.btn-primary:hover {
+  background-color: var(--color-primary);
+  svg {
+    stroke: white;
+  }
+}
+
+.btn-primary:hover .postear{
+  stroke: white;
   background-color: var(--color-primary);
 }
 
-.btn-comment:hover .postear{
-  stroke: white;
+.btn-secondary {
+  display: flex;
+  background-color: white;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-secondary svg{
+  width: 25px;
+  height: 25px;
+  stroke: var(--color-primary);
+  pointer-events: none;
+  stroke-width: 2px;
+}
+.btn-secondary:hover{
   background-color: var(--color-primary);
+}
+.btn-secondary:hover svg{
+  stroke: white;
 }

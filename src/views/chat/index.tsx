@@ -1,42 +1,55 @@
+import { useState } from 'react';
 import './index.css'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import IconButton from '../../components/IconButton/IconButton';
 export default function Chat() {
+
+    const [widthOverlay, setWidthOverlay] = useState('0')
+    const navigate = useNavigate();
+
+    function showOverlay() {
+        setWidthOverlay('400px')
+    }
+    function closeOverlay() {
+        setWidthOverlay('0px')
+    }
+
     return (
         <main className="my-chats">
-            <div className="overlay" id="overlay">
+            <div className="overlay" style={{ width: widthOverlay }}>
                 <div className="modal">
                     <div className="modal-header">
                         <h1>Your Friends</h1>
-                        <a id="closeOverlay">
+                        <IconButton onClick={closeOverlay} style='secondary'>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" strokeLinecap="round" />
                                 <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" strokeLinecap="round" />
                             </svg>
-                        </a>
+                        </IconButton>
                     </div>
-                    <div id="addChat" className="friend-chat" >
+                    <div className="friend-chat" >
                         <div className="avatar-icon">
-                            <img src="/img/favicon.jpg" alt="avatar" className="avatar-icon" />
+                            <img src="img/favicon.jpg" alt="avatar" className="avatar-icon" />
                         </div>
-                        <h2> friend.firstName  friend.lastName </h2>
+                        <h2> Luis Bravo </h2>
                     </div>
                 </div>
             </div>
             <section className="chats">
                 <div className="chats-header">
                     <h1>Chats</h1>
-                    <a id="showOverlay">
+                    <IconButton onClick={showOverlay}>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 12H18" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M12 18V6" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                    </a>
-                    <Link to="/">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.00002 15.3802H13.92C15.62 15.3802 17 14.0002 17 12.3002C17 10.6002 15.62 9.22021 13.92 9.22021H7.15002" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                            <path d="M8.57 10.7701L7 9.19012L8.57 7.62012" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </Link>
+                    </IconButton>
+                    <IconButton onClick={ () => navigate('/')}>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.00002 15.3802H13.92C15.62 15.3802 17 14.0002 17 12.3002C17 10.6002 15.62 9.22021 13.92 9.22021H7.15002" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M8.57 10.7701L7 9.19012L8.57 7.62012" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                    </IconButton>
                 </div>
                 <div id="chats-body">
 

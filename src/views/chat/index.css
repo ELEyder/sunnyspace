@@ -11,6 +11,7 @@ section.chats {
     background-color: white;
     display: flex;
     padding: 20px;
+    gap: 10px;
 }
 
 .chats-header h1{
@@ -20,15 +21,7 @@ section.chats {
     font-size: 20px;
     font-family: var(--poppins);
 }
-.chats-header a{
-    background-color: var(--color-secondary);
-    border: 0;
-    outline: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin: 0 0 0 20px;
-}
+
 .chats-header svg{
     width: 25px;
     height: 25px;
@@ -36,12 +29,7 @@ section.chats {
     pointer-events: none;
     stroke-width: 2px;
 }
-.chats-header a:hover{
-    background-color: var(--color-primary);
-}
-.chats-header a:hover svg{
-    stroke: white;
-}
+
 .btn-chat {
     background-color: white;
     font-weight: 500;
@@ -177,6 +165,7 @@ section.chats {
     width: 0px;
     transition: 0.2s ease-in;
     height: 100%;
+    left: 0px;
 }
 .modal h1 {
     white-space: nowrap;
@@ -189,28 +178,7 @@ section.chats {
     display: flex;
     align-items: center;
 }
-.modal-header a{
-    background-color: white;
-    border: 0;
-    outline: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin: 0 0 0 20px;
-}
-.modal-header svg{
-    width: 25px;
-    height: 25px;
-    stroke: var(--color-primary);
-    pointer-events: none;
-    stroke-width: 2px;
-}
-.modal-header a:hover{
-    background-color: var(--color-primary);
-}
-.modal-header a:hover svg{
-    stroke: white;
-}
+
 .friend-chat {
     white-space: nowrap;
     background: white;
