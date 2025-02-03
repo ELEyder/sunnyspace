@@ -25,7 +25,6 @@ h2.title{
     font-size: 30px;
     color: var(--cp);
     text-align: center;
-    width: 100%;
 }
 
 .inputGroup {
@@ -37,6 +36,7 @@ h2.title{
     flex-direction: row;
     gap: 20px;
 }
+
 .medium {
     display: inline;
 }
@@ -95,49 +95,18 @@ h2.title{
     }
 }
 
-.btn {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    background: var(--cp);
-    box-shadow: 0 5px 10px var(--cp);
-    font-size: 16px;
-    color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-}
-
 .signLink {
     font-size: 14px;
     text-align: center;
-}
-
-.signLink p {
     color: #333;
 }
 
-.signLink p a {
+.link {
     color: var(--cp);
     text-decoration: none;
     font-weight: 600;
 }
 
-.signLink p a:hover {
+.link:hover {
     text-decoration: underline;
 }
-
-.google {
-    width: 20px;
-    height: 20px;
-}
-
-.btnGoogle {
-    width: 40px;
-    height: 40px;
-}
-
