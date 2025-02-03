@@ -9,8 +9,8 @@ div.usuario {
   margin-right: 10px;
 }
 .btnAgregarAmigo {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  background-color: var(--cs);
+  color: var(--cp);
   font-family: var(--poppins);
   font-weight: 500;
   text-decoration: none;
@@ -21,7 +21,7 @@ div.usuario {
 }
 
 .btnAgregarAmigo:hover {
-  background-color: var(--color-primary);
+  background-color: var(--cp);
   color: white;
 }
 .default-user-state{

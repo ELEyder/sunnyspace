@@ -79,7 +79,7 @@ a {
     font-size: 14px;
 }
 a.author-name {
-    color: var(--color-primary);
+    color: var(--cp);
 }
 div.post-header{
     padding: 15px;
@@ -131,6 +131,6 @@ p.content {
 }
 
 .active {
-    color: var(--color-primary);
+    color: var(--cp);
 }
 

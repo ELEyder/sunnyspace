@@ -1,25 +1,25 @@
-body {
+main.default {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: var(--color-primary);
+    background: var(--cp);
     overflow: hidden;
 }
 
-button.toggle-login {
+button.toggleLogin {
     position: absolute;
     top: 20px;
     right: 20px;
     width: 150px;
     height: 50px;
-    background: var(--color-secondary);
+    background: var(--cs);
     border-radius: 10px;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 20px;
-    color: var(--color-primary);
+    color: var(--cp);
     font-weight: 500;
     z-index: 1;
     transform-origin: bottom right;
@@ -36,10 +36,10 @@ button.active {
     right: 10px;
     width: 30px;
     height: 30px;
-    background: var(--color-primary);
+    background: var(--cp);
     border-radius: 50%;
     text-decoration: none;
-    box-shadow: 0 5px 10px var(--color-primary);
+    box-shadow: 0 5px 10px var(--cp);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,10 +90,10 @@ button.active {
     position: absolute;
     width: 400px;
     height: 500px;
-    background:var(--color-primary);
+    background:var(--cp);
 }
 
-.wrapper.show-bg .bg {
+.wrapper.showBg .bg {
     z-index: 1;
 }
 
@@ -112,38 +112,38 @@ button.active {
     transition: transform .5s ease-in-out, background 0s, left .5s ease-in-out;
 }
 
-.wrapper.active .from-wrapper {
+.wrapper.active .fromWrapper {
     background:#fff;
     transform: translate(0, 0) scale(1);
     border-radius: 20px;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--cp);
 }
 
-.wrapper.show-sign .from-wrapper.sign-in {
+.wrapper.show-sign .fromWrapper.sign-in {
     left: -2000px;
     transition-delay: 0s;
 }
 
-.wrapper .from-wrapper.sign-up {
+.wrapper .fromWrapper.sign-up {
     transform: translateX(2000px);
     transition-delay: 0x;
 }
 
-.wrapper.show-sign .from-wrapper.sign-up {
+.wrapper.showSign .fromWrapper.sign-up {
     transform: translateX(0);
 }
 
 h2 {
     font-size: 30px;
-    color: var(--color-primary);
+    color: var(--cp);
     text-align: center;
 }
 
-.input-group {
+.inputGroup {
     position: relative;
     margin: 30px 0;
 }
-.input-group-names {
+.inputGroupNames {
     position: relative;
     margin: 30px 0;
     overflow: hidden;
@@ -155,7 +155,7 @@ h2 {
     right: 0;
 }
 
-.input-group label {
+.inputGroup label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -167,7 +167,7 @@ h2 {
     transition: .5s;
 }
 
-.input-group input {
+.inputGroup input {
     width: 320px;
     height: 40px;
     font-size: 16px;
@@ -183,17 +183,17 @@ h2 {
     width: 140px;
 }
 
-.input-group input:focus~label,
-.input-group input:valid~label {
+.inputGroup input:focus~label,
+.inputGroup input:valid~label {
     top: 0;
     font-size: 12px;
     background: #fff;
-    color: var(--color-primary);
+    color: var(--cp);
 }
 
-.input-group input:focus,
-.input-group input:valid {
-    border: 1px solid var(--color-primary);
+.inputGroup input:focus,
+.inputGroup input:valid {
+    border: 1px solid var(--cp);
 }
 
 .remember {
@@ -206,7 +206,7 @@ h2 {
 }
 
 .remember label imput {
-    accent-color: var(--color-primary);
+    accent-color: var(--cp);
 }
 
 .btn {
@@ -215,8 +215,8 @@ h2 {
     left: 0;
     width: 100%;
     height: 40px;
-    background: var(--color-primary);
-    box-shadow: 0 5px 10px var(--color-primary);
+    background: var(--cp);
+    box-shadow: 0 5px 10px var(--cp);
     font-size: 16px;
     color: #fff;
     font-weight: 500;
@@ -226,23 +226,23 @@ h2 {
     outline: none;
 }
 
-.sign-link {
+.signLink {
     font-size: 14px;
     text-align: center;
     margin: 25px 0;
 }
 
-.sign-link p {
+.signLink p {
     color: #333;
 }
 
-.sign-link p a {
-    color: var(--color-primary);
+.signLink p a {
+    color: var(--cp);
     text-decoration: none;
     font-weight: 600;
 }
 
-.sign-link p a:hover {
+.signLink p a:hover {
     text-decoration: underline;
 }
 
@@ -251,7 +251,7 @@ h2 {
     height: 20px;
 }
 
-.btn-google {
+.btnGoogle {
     width: 40px;
     height: 40px;
 }

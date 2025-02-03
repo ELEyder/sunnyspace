@@ -72,21 +72,6 @@ select:focus {
     background-color: var(--white-secondary);
 }
 
-button {
-    background-color: var(--color-secondary); 
-    color: var(--color-primary);
-    padding: 10px 20px 10px 20px;
-    outline: none;
-    border: 0;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: var(--poppins);
-}
-button:hover {
-    background-color: var(--color-primary);
-    color: white;
-}
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {

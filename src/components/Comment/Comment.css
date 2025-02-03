@@ -57,12 +57,12 @@ img.avatar-icon-comment {
 svg.postear {
   width: 25px;
   height: 25px;
-  stroke: var(--color-primary);
+  stroke: var(--cp);
   pointer-events: none;
 }
 
 .btn-primary {
-  background-color: var(--color-secondary);
+  background-color: var(--cs);
   border: 0;
   border-radius: 10px;
   display: flex;
@@ -73,7 +73,7 @@ svg.postear {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary);
+  background-color: var(--cp);
   svg {
     stroke: white;
   }
@@ -81,7 +81,7 @@ svg.postear {
 
 .btn-primary:hover .postear{
   stroke: white;
-  background-color: var(--color-primary);
+  background-color: var(--cp);
 }
 
 .btn-secondary {
@@ -95,12 +95,12 @@ svg.postear {
 .btn-secondary svg{
   width: 25px;
   height: 25px;
-  stroke: var(--color-primary);
+  stroke: var(--cp);
   pointer-events: none;
   stroke-width: 2px;
 }
 .btn-secondary:hover{
-  background-color: var(--color-primary);
+  background-color: var(--cp);
 }
 .btn-secondary:hover svg{
   stroke: white;

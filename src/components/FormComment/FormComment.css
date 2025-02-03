@@ -38,6 +38,6 @@
   svg.postear {
     width: 25px;
     height: 25px;
-    stroke: var(--color-primary);
+    stroke: var(--cp);
     pointer-events: none;
   }

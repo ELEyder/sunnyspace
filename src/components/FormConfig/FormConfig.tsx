@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
 import { IUser } from "../../interfaces/IUser";
 import { ICountry } from "../../interfaces/ICountry";
+import { useNavigate } from "react-router-dom";
+
+import Button from "../Button/Button";
 
   const userLogin: IUser = {
     address: "Sin especificar",
@@ -36,6 +38,8 @@ import { ICountry } from "../../interfaces/ICountry";
   }
 ]  
 export default function FormConfig() {
+  const navigate = useNavigate();
+
   return (
     <form className="configurar" method="POST" encType="multipart/form-data">
       <div className="option">
@@ -67,12 +71,14 @@ export default function FormConfig() {
         <label htmlFor="">Phone: </label>
         <input type="text" name="phone" pattern="[0-9]*" defaultValue={ userLogin.phoneNumber } required />
       </div>
-      <button type="submit" className="btn">
-        <Link to="/">Back</Link>
-        </button>
-        <button type="submit" className="btn">
-        <Link to="/">Save</Link>
-        </button>
+      <Button
+      onClick={() => navigate('/')}>
+        Back
+      </Button>
+      <Button
+      onClick={() => navigate('/')}>
+        Save
+      </Button>
     </form>
   )
 }

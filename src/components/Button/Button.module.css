@@ -1,6 +1,6 @@
-button.postear {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+.button {
+  color: var(--cp);
+  background-color: var(--cs);
   font-family: var(--poppins);
   font-weight: 500;
   border: 0px;
@@ -9,7 +9,7 @@ button.postear {
   cursor: pointer;
 }
 
-button.postear:hover {
+.button:hover {
   color: white;
-  background-color: var(--color-primary);
+  background-color: var(--cp);
 }
