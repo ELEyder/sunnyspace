@@ -2,6 +2,7 @@ import styles from './Nav.module.css'
 import { Link, useNavigate } from 'react-router-dom';
 import type { IUserLogin } from '../../interfaces/IUserLogin';
 import IconButton from '../IconButton/IconButton';
+import Avatar from '../Avatar/Avatar';
 
 interface NavProps {
   userLogin: IUserLogin;
@@ -13,19 +14,11 @@ export default function Nav({ userLogin }: NavProps) {
   return (
     <header className={styles.nav}>
       <div className={styles.home}>
-        <Link to={"/"}>
-          <div className={styles.logoContainer}>
-            <img src="favicon.ico" alt="logo" className={styles.logo} />
-          </div>
-        </Link>
+        <Avatar onClick={() => navigate('/')} />
         <input className={styles.search} type="text" placeholder="Buscar en SunnySpace" />
       </div>
       <div className={styles.infoUser}>
-        <Link to="/profile">
-          <div className={styles.avatarContainer}>
-            <img src={userLogin.urlAvatar} alt="avatar" className={styles.avatar} />
-          </div>
-        </Link>
+      <Avatar onClick={() => navigate('/profile')} />
         <div className={styles.textUser}>
           <p className={`${styles.user} ${styles.name}`}>{userLogin.firstName} {userLogin.lastName}</p>
           <div className={styles.state}>

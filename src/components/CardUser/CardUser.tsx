@@ -3,6 +3,7 @@ import { IUser } from "../../interfaces/IUser"
 
 import Button from "../Button/Button"
 import styles from "./CardUser.module.css"
+import Avatar from "../Avatar/Avatar"
 
 interface PropCardUser {
   user: IUser
@@ -13,9 +14,7 @@ export default function CardUser({ user }: PropCardUser) {
       <div className={styles.usuario}>
         <div className={styles.userState}>
           <Link to={`user/@${user.firstName}`}>
-            <div className={styles.avatarContainer}>
-              <img src="img/favicon.jpg" alt="avatar" className={styles.avatar} />
-            </div>
+            <Avatar />
             <div className={styles.status}>
               <div className={`${styles.statusCircle} ${user.status}`}></div>
             </div>

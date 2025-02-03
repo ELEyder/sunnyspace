@@ -1,11 +1,16 @@
 import './Comment.css';
 import FormComment from '../FormComment/FormComment';
 import { IComment } from '../../interfaces/IComment';
+import Avatar from '../Avatar/Avatar';
+import { useNavigate } from 'react-router-dom';
 
 interface PropsComment {
     comment: IComment
 }
 export default function Comment({ comment }: PropsComment) {
+    
+    const navigate = useNavigate();
+
     return (
         <>
             <FormComment />
@@ -13,11 +18,7 @@ export default function Comment({ comment }: PropsComment) {
             <div className="comments">
                 <div className="comment">
                     <div className="comment-header">
-                        <a href="{% url 'viewUser' username=comment.authorUsername %}">
-                            <div className="avatar-icon-comment">
-                                <img src="img/favicon.jpg" alt="avatar" className="avatar-icon-comment" />
-                            </div>
-                        </a>
+                        <Avatar onClick={() => navigate('/')}/>
                     </div>
                     <div className='comment-body'>
                         <div className="comment-text">
