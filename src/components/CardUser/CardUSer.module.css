@@ -1,0 +1,42 @@
+div.usuario {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.usuarioText {
+  width: 150px;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+.userState{
+  position: relative;
+}
+.status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 10px;
+}
+.statusCircle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.avatarContainer {
+  background-color: white;
+  width: 52px;
+  min-width: 52px;
+  height: 52px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.avatar {
+  width: auto;
+  height: 52px;
+}
