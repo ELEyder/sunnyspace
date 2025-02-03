@@ -1,5 +1,5 @@
 import styles from './Nav.module.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import type { IUserLogin } from '../../interfaces/IUserLogin';
 import IconButton from '../IconButton/IconButton';
 import Avatar from '../Avatar/Avatar';

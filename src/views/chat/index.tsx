@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './index.css'
 import { useNavigate } from 'react-router-dom'
 import IconButton from '../../components/IconButton/IconButton';
+import Avatar from '../../components/Avatar/Avatar';
 export default function Chat() {
 
     const [widthOverlay, setWidthOverlay] = useState('0')
@@ -28,9 +29,7 @@ export default function Chat() {
                         </IconButton>
                     </div>
                     <div className="friend-chat" >
-                        <div className="avatar-icon">
-                            <img src="img/favicon.jpg" alt="avatar" className="avatar-icon" />
-                        </div>
+                        <Avatar onClick={() => navigate('/')} />
                         <h2> Luis Bravo </h2>
                     </div>
                 </div>

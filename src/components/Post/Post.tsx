@@ -2,8 +2,9 @@ import { useRef } from 'react';
 import './Post.css';
 import type { IPost } from "../../interfaces/IPost";
 import Comment from '../Comment/Comment';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { IComment } from '../../interfaces/IComment';
+import Avatar from '../Avatar/Avatar';
 
 interface PostProps {
     post: IPost,
@@ -30,14 +31,12 @@ export default function Post({ post } : PostProps) {
         }
     };
 
+    const navigate = useNavigate();
     return (
         <>
             <div className="post">
                 <div className="post-header">
-                    <Link to={`user/@${post.author}`}>
-                        <div className="avatar-icon">
-                            <img src={"img/favicon.jpg"} alt="avatar" className="avatar-icon"/></div>
-                    </Link>
+                <Avatar onClick={() => navigate(`user/@${post.author}`)} />
                     <div>
                         <Link to={`user//@${post.author}`} className="author-name"> {post.author} </Link> <a href=""> {post.action} </a>
                         <p className="post"> { post.date.toLocaleString() } -  {post.privacy} </p>
