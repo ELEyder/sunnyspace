@@ -54,16 +54,6 @@ input.media {
     z-index: -1;
 }
 
-label.media {
-    width: max-content;
-    text-align: center;
-    /* color: var(--color-dark); */
-    padding: 20px;
-    border-radius: 10px;
-    font-family: var(--poppins);
-    cursor: pointer;
-}
-
 /* ------------------------------------------------------------- POSTS ------------------------------------------------------------- */
 
 div.post {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './index.css'
 import { useNavigate } from 'react-router-dom'
-import IconButton from '../../components/IconButton/IconButton';
+import Button from '../../components/Button/Button';
 import Avatar from '../../components/Avatar/Avatar';
 export default function Chat() {
 
@@ -21,12 +21,12 @@ export default function Chat() {
                 <div className="modal">
                     <div className="modal-header">
                         <h1>Your Friends</h1>
-                        <IconButton onClick={closeOverlay} style='secondary'>
+                        <Button onClick={closeOverlay} style='secondary'>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" strokeLinecap="round" />
                                 <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" strokeLinecap="round" />
                             </svg>
-                        </IconButton>
+                        </Button>
                     </div>
                     <div className="friend-chat" >
                         <Avatar onClick={() => navigate('/')} />
@@ -37,18 +37,18 @@ export default function Chat() {
             <section className="chats">
                 <div className="chats-header">
                     <h1>Chats</h1>
-                    <IconButton onClick={showOverlay}>
+                    <Button onClick={showOverlay}>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 12H18" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M12 18V6" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                    </IconButton>
-                    <IconButton onClick={ () => navigate('/')}>
+                    </Button>
+                    <Button onClick={ () => navigate('/')}>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.00002 15.3802H13.92C15.62 15.3802 17 14.0002 17 12.3002C17 10.6002 15.62 9.22021 13.92 9.22021H7.15002" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M8.57 10.7701L7 9.19012L8.57 7.62012" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                    </IconButton>
+                    </Button>
                 </div>
                 <div id="chats-body">
 
