@@ -19,7 +19,11 @@
     text-decoration: none;
     font-size: 16px;
 }
-a, h1, h2, p {
+
+a,
+h1,
+h2,
+p {
     text-decoration: none;
     font-family: var(--poppins);
     font-size: 14px;
@@ -30,6 +34,12 @@ body {
 
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(233, 233, 233);
+}
+
 svg {
     width: 25px;
     height: 25px;
@@ -37,7 +47,8 @@ svg {
 }
 
 ::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra de desplazamiento */
+    width: 10px;
+    /* Ancho de la barra de desplazamiento */
 }
 
 ::-webkit-scrollbar-track {
@@ -47,6 +58,8 @@ svg {
 
 ::-webkit-scrollbar-thumb {
     /* background-color: #9f9f9f; */
-    background-color: var(--cs); /* Color del "pulgarcito" de la barra de desplazamiento */
-    border-radius: 5px; /* Bordes redondeados */
+    background-color: var(--cs);
+    /* Color del "pulgarcito" de la barra de desplazamiento */
+    border-radius: 5px;
+    /* Bordes redondeados */
 }

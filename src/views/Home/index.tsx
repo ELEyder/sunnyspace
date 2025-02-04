@@ -1,4 +1,4 @@
-import './index.css';
+import styles from './index.module.css';
 import Post from '../../components/Post/Post';
 import FormPost from '../../components/FormPost/FormPost';
 import type { IPost } from '../../interfaces/IPost';
@@ -6,8 +6,6 @@ import CardUser from '../../components/CardUser/CardUser';
 import { IUser } from '../../interfaces/IUser';
 
 export default function Home() {
-
-
 
   const defaultPost: IPost = {
     id: '',
@@ -52,14 +50,14 @@ export default function Home() {
 
   return (
     <>
-      <section className="posts">
+      <section className={styles.posts}>
         <FormPost />
         <Post post={defaultPost} />
         <Post post={defaultPost} />
         <Post post={defaultPost} />
       </section>
-      <section className="usuarios">
-        <div className="users">
+      <section className={styles.users}>
+        <div className={styles.container}>
           <CardUser user={exampleUser}/>
           <CardUser user={exampleUser}/>
           <CardUser user={exampleUser}/>
