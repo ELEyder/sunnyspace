@@ -1,9 +1,8 @@
-import './Comment.css';
 import FormComment from '../FormComment/FormComment';
 import { IComment } from '../../interfaces/IComment';
 import Avatar from '../Avatar/Avatar';
 import { useNavigate } from 'react-router-dom';
-
+import styles from './Comment.module.css'
 interface PropsComment {
     comment: IComment
 }
@@ -13,9 +12,6 @@ export default function Comment({ comment }: PropsComment) {
 
     return (
         <>
-            <FormComment />
-
-            <div className="comments">
                 <div className="comment">
                     <div className="comment-header">
                         <Avatar onClick={() => navigate('/')}/>
@@ -36,9 +32,7 @@ export default function Comment({ comment }: PropsComment) {
                             ) : null}
                         </div>
                     </div>
-
                 </div>
-            </div>
         </>
     );
 }

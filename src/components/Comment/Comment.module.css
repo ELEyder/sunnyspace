@@ -61,28 +61,7 @@ svg.postear {
   pointer-events: none;
 }
 
-.btn-primary {
-  background-color: var(--cs);
-  border: 0;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px 10px 20px;
-  cursor: pointer;
-}
 
-.btn-primary:hover {
-  background-color: var(--cp);
-  svg {
-    stroke: white;
-  }
-}
-
-.btn-primary:hover .postear{
-  stroke: white;
-  background-color: var(--cp);
-}
 
 .btn-secondary {
   display: flex;

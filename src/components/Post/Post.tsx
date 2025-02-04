@@ -1,10 +1,12 @@
 import { useRef } from 'react';
-import './Post.css';
-import type { IPost } from "../../interfaces/IPost";
-import Comment from '../Comment/Comment';
 import { Link, useNavigate } from 'react-router-dom';
 import { IComment } from '../../interfaces/IComment';
+import type { IPost } from "../../interfaces/IPost";
+import Comment from '../Comment/Comment';
+import FormComment from '../FormComment/FormComment';
 import Avatar from '../Avatar/Avatar';
+
+import './Post.css';
 
 interface PostProps {
     post: IPost,
@@ -65,7 +67,11 @@ export default function Post({ post } : PostProps) {
                 
 
             <audio ref={audioRef} src="audio/like.mp3"></audio>
-            <Comment comment={comment}/>
+            <div className="comments">
+            <FormComment />
+                <Comment comment={comment}/>
+            </div>
+
             </div>
         </>
     );

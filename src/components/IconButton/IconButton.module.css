@@ -1,0 +1,17 @@
+.btnPrimary {
+  background-color: var(--cs);
+  border: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+}
+
+.btnPrimary:hover {
+  background-color: var(--cp);
+  svg {
+    stroke: white;
+  }
+}
