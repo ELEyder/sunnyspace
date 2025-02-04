@@ -40,6 +40,10 @@ main {
     background-color: rgb(233, 233, 233);
 }
 
+label {
+    font-family: var(--poppins);
+}
+
 svg {
     width: 25px;
     height: 25px;

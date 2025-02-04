@@ -1,6 +1,7 @@
 import { IUser } from "../../interfaces/IUser";
 import { ICountry } from "../../interfaces/ICountry";
 import { useNavigate } from "react-router-dom";
+import styles from './FormConfig.module.css'
 
 import Button from "../Button/Button";
 
@@ -41,20 +42,20 @@ export default function FormConfig() {
   const navigate = useNavigate();
 
   return (
-    <form className="configurar" method="POST" encType="multipart/form-data">
-      <div className="option">
-        <label htmlFor="avatar" className="avatar">Select new avatar</label>
-        <input type="file" name="avatar" className="avatar" id="avatar" accept=".jpg, .gif" />
+    <form className={styles.configurar} method="POST" encType="multipart/form-data">
+      <div className={styles.option}>
+        <label htmlFor="avatar" className={styles.avatar}>Select new avatar</label>
+        <input type="file" name="avatar" className={styles.avatar} id="avatar" accept=".jpg, .gif" />
       </div>
-      <div className="option">
+      <div className={styles.option}>
         <label htmlFor="">First Name: </label>
         <input type="text" name="firstName" defaultValue={ userLogin.firstName } required />
       </div>
-      <div className="option">
+      <div className={styles.option}>
         <label htmlFor="">Last Name: </label>
         <input type="text" name="lastName" defaultValue={ userLogin.lastName } required />
       </div>
-      <div className="option">
+      <div className={styles.option}>
         <label htmlFor="">Country: </label>
         <select name="country" defaultValue={'1'} required>
           { countries.map( country => (
@@ -63,11 +64,11 @@ export default function FormConfig() {
           )}
         </select>
       </div>
-      <div className="option">
+      <div className={styles.option}>
         <label htmlFor="">Address: </label>
         <input type="text" name="address" defaultValue={ userLogin.address } required />
       </div>
-      <div className="option">
+      <div className={styles.option}>
         <label htmlFor="">Phone: </label>
         <input type="text" name="phone" pattern="[0-9]*" defaultValue={ userLogin.phoneNumber } required />
       </div>

@@ -1,0 +1,68 @@
+form.configurar {
+  background-color: white;
+  border-radius: 10px;
+    box-shadow: 0 10 10px;
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+input.avatar {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+label.avatar {
+  text-align: center;
+  color: var(--color-dark);
+  padding: 20px;
+  border-radius: 10px;
+  font-family: var(--poppins);
+  cursor: pointer;
+}
+
+label.avatar:hover {
+  background-color: var(--white-secondary);
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+}
+
+input:hover,
+input:focus {
+    background-color: var(--white-secondary);
+}
+
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+}
+
+select:hover,
+select:focus {
+    background-color: var(--white-secondary);
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
