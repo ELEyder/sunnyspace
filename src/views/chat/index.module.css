@@ -1,6 +1,9 @@
 main.container {
     display: flex;
     height: 100vh;
+    position: relative;
+    top: 0px;
+
 }
 /* Modal */
 .overlay {
@@ -11,6 +14,7 @@ main.container {
     transition: 0.2s ease-in;
     height: 100%;
     left: 0px;
+    z-index: 20;
 }
 
 .modal h1 {
@@ -33,8 +37,18 @@ main.container {
     cursor: pointer;
     display: flex;
     align-items: center;
+    background-color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    gap: 10px
 }
 
+.cardChat:hover {
+    background-color: var(--white-secondary);
+}
 /* Chats */
 section.chats {
     display: flex;
@@ -55,39 +69,13 @@ section.chats {
     font-family: var(--poppins);
 }
 
-.cardChat {
-    background-color: white;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    cursor: pointer;
-}
-
-.cardChat:hover {
-    background-color: var(--white-secondary);
-}
 
 .defaultUserState{
     position: relative;
 }
 
-.avatarContainer {
-    background-color: white;
-    width: 52px;
-    min-width: 52px;
-    height: 52px;
-    margin-right: 10px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-.avatar {
-    width: auto;
-    height: 52px;
-}
+
+
 .defaultUser {
     position: absolute;
     bottom: 0;
@@ -218,6 +206,8 @@ video.media {
 
 .inputChat{
     display: flex;
+    gap: 5px;
+    padding: 10px;
 }
 
 .inputMsg {
@@ -259,5 +249,13 @@ label.file-media:hover {
             padding: 20px 0;
             box-shadow: 0px 6px 18px rgba(var(--shadow-rgb), .05);
         }
+        .overlay {
+            height: calc(100% - 40px);
+        }
+
+        .inputChat{
+            padding: 10px 0 0 0;
+        }
+        
     }
 }

@@ -1,6 +1,7 @@
 .comment {
   display: flex;
   padding: 15px;
+  width: 100%;
 }
 
 .body {
@@ -28,43 +29,7 @@ p.content {
   overflow: hidden;
 }
 
-.author-name {
-  font-weight: 800;
-}
-.prepare-coment {
-  height: 60px;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-svg.postear {
-  width: 25px;
-  height: 25px;
-  stroke: var(--cp);
-  pointer-events: none;
-}
-
-
-
-.btn-secondary {
-  display: flex;
-  background-color: white;
-  border: 0;
-  outline: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.btn-secondary svg{
-  width: 25px;
-  height: 25px;
-  stroke: var(--cp);
-  pointer-events: none;
-  stroke-width: 2px;
-}
-.btn-secondary:hover{
-  background-color: var(--cp);
-}
-.btn-secondary:hover svg{
-  stroke: white;
+.media {
+    max-width: 100%; /* La imagen/video no será más ancha que su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
 }

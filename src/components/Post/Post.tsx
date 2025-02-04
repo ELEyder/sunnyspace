@@ -6,7 +6,7 @@ import Comment from '../Comment/Comment';
 import FormComment from '../FormComment/FormComment';
 import Avatar from '../Avatar/Avatar';
 
-import './Post.css';
+import styles from './Post.module.css';
 
 interface PostProps {
     post: IPost,
@@ -36,42 +36,47 @@ export default function Post({ post } : PostProps) {
     const navigate = useNavigate();
     return (
         <>
-            <div className="post">
-                <div className="post-header">
-                <Avatar onClick={() => navigate(`user/@${post.author}`)} />
-                    <div>
-                        <Link to={`user//@${post.author}`} className="author-name"> {post.author} </Link> <a href=""> {post.action} </a>
-                        <p className="post"> { post.date.toLocaleString() } -  {post.privacy} </p>
+            <div className={styles.post}>
+                <div className={styles.postHeader}>
+                    <Avatar onClick={() => navigate(`user/@${post.author}`)} />
+                    <div className={styles.textContainer}>
+                        <p className={styles.text}>
+                            <Link to={`user/@${post.author}`} >
+                                <span className={styles.authorName}>
+                                    {post.author}
+                                </span>
+                                &nbsp;
+                                {post.action}
+                            </Link>
+                        </p>
+                        <p className={styles.postDate}> { post.date.toLocaleString() } -  {post.privacy} </p>
                     </div>
                 </div>
-                <div className="post-main">
-                    <p className="content"> { post.content }</p>
+                <div className={styles.postMain}>
+                    <p className={styles.content}> { post.content }</p>
                 </div>
-                <div className="post-media">
-                        { post.typeMedia === "img" ? (
-                            <img src={ post.urlMedia } alt="" className="media"/>
-
-                        ): post.typeMedia === "img" ? (
-                         <video controls className="media">
-                            <source className="media" src={ post.urlMedia } type="video/mp4"/>
-                            <source className="media" src={ post.urlMedia } type="video/avi"/>
+                <div className={styles.postMedia}>
+                    { post.typeMedia === "img" ? (
+                        <img src={ post.urlMedia } alt="" className={styles.media}/>
+                    ): post.typeMedia === "video" ? (
+                        <video controls className={styles.media}>
+                            <source src={ post.urlMedia } type="video/mp4"/>
+                            <source src={ post.urlMedia } type="video/avi"/>
                             Tu navegador no soporta la reproducción de videos.
-                         </video>
-                        ) : null}
+                        </video>
+                    ) : null}
                 </div>
-                <div className="post-options">
-                    <a className={`btn-post-option ${ post.likesD.includes('0') ? 'active' : 'inactive' }`} onClick={playAudio}>Likes: {post.likes}</a>
-                    <a className="btn-post-option" onClick={() => console.log("goComment") }>Comments: {post.comments}</a>
-                    <a className="btn-post-option"href="#">Searchs:  {post.searchs} </a>
+                <div className={styles.postOptions}>
+                    <a className={`${styles.btnPostOption} ${ post.likesD.includes('0') ? styles.active : styles.inactive }`} onClick={playAudio}>Likes: {post.likes}</a>
+                    <a className={styles.btnPostOption} onClick={() => console.log("goComment") }>Comments: {post.comments}</a>
+                    <a className={styles.btnPostOption} href="#">Searchs:  {post.searchs} </a>
                 </div>
-                
 
-            <audio ref={audioRef} src="audio/like.mp3"></audio>
-            <div className="comments">
-            <FormComment />
-                <Comment comment={comment}/>
-            </div>
-
+                <audio ref={audioRef} src="audio/like.mp3"></audio>
+                <div className={styles.comments}>
+                    <FormComment />
+                    <Comment comment={comment}/>
+                </div>
             </div>
         </>
     );

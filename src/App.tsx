@@ -10,6 +10,7 @@ import Config from "./views/Config";
 import Profile from "./views/Profile";
 import Login from "./views/Login";
 import Register from "./views/Register";
+import Logout from "./views/Logout";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Route>
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<Register />} />
         <Route path="/config" element={<Config />} />
         <Route path="/chat" element={<Chat />} />

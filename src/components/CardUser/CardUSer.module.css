@@ -2,11 +2,11 @@ div.usuario {
   padding: 10px;
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .usuarioText {
   width: 150px;
   margin: 0px;
-  margin-right: 10px;
 }
 
 .userState{
@@ -16,7 +16,6 @@ div.usuario {
   position: absolute;
   bottom: 0;
   right: 0;
-  margin-right: 10px;
 }
 .statusCircle {
   width: 15px;
@@ -39,4 +38,13 @@ div.usuario {
 .avatar {
   width: auto;
   height: 52px;
+}
+
+.Disconected {
+  background-color: rgb(143, 143, 143);
+}
+
+
+.Online {
+  background-color: rgb(0, 255, 0);
 }

@@ -1,0 +1,71 @@
+.post {
+    width: 460px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10 10px;
+}
+
+.text, a {
+    color: var(--color-dark)
+}
+
+.authorName {
+    font-weight: 800;
+    color: var(--cp);
+
+}
+div.postHeader{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+p.post{
+    font-size: 14px;
+    
+}
+
+div.postMain{
+    padding: 0px 15px 15px 15px;
+}
+div.postMedia {
+    display: flex;
+}
+.media {
+    width: 100%;
+}
+.postOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p.content {
+    margin: 0;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+.btnPostOption {
+    color: var(--color-dark);
+    font-family: var(--poppins);
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+}
+.btnPostOption:hover,
+.btnPostOption:focus {
+    background-color: var(--white-secondary);
+}
+
+.inactive {
+    color: var(--color-dark);
+}
+
+.active {
+    color: var(--cp);
+}

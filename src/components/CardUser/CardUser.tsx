@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 import { IUser } from "../../interfaces/IUser"
 
 import Button from "../Button/Button"
-import styles from "./CardUser.module.css"
 import Avatar from "../Avatar/Avatar"
+import styles from "./CardUser.module.css"
 
 interface PropCardUser {
   user: IUser
@@ -16,10 +16,9 @@ export default function CardUser({ user }: PropCardUser) {
           <Link to={`user/@${user.firstName}`}>
             <Avatar />
             <div className={styles.status}>
-              <div className={`${styles.statusCircle} ${user.status}`}></div>
+              <div className={`${styles.statusCircle} ${user.status == 'Online' ? styles.Online : styles.Disconected}`}></div>
             </div>
           </Link>
-
         </div>
         <div className={styles.usuarioText}>
           <Link to={`user/@${user.firstName}`}>

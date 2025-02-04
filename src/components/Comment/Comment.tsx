@@ -12,7 +12,7 @@ export default function Comment({ comment }: PropsComment) {
     return (
         <>
             <div className={styles.comment}>
-                <div>
+                <div style={{margin: "0 10px 0 0"}}>
                     <Avatar onClick={() => navigate('/')} />
                 </div>
                 <div className={styles.body}>
@@ -21,9 +21,9 @@ export default function Comment({ comment }: PropsComment) {
                     </div>
                     <div className={styles.commentMedia}>
                         {comment.typeMedia === "img" ? (
-                            <img src={comment.urlMedia} alt="" className="media" />
+                            <img src={comment.urlMedia} alt="" className={styles.media} />
                         ) : comment.typeMedia === "video" ? (
-                            <video controls className="media">
+                            <video controls className={styles.media}>
                                 <source className="media" src={comment.urlMedia} type="video/mp4" />
                                 <source className="media" src={comment.urlMedia} type="video/avi" />
                                 Tu navegador no soporta la reproducción de videos.

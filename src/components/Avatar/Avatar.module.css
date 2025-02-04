@@ -4,14 +4,16 @@
   width: 52px;
   min-width: 52px;
   height: 52px;
-  margin-right: 10px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative; /* Crea un contexto de apilamiento */
+  z-index: 10;
 }
 .avatar {
+  position:absolute;
   width: auto;
   height: 52px;
 }
