@@ -33,7 +33,40 @@
   }
 }
 
+.secondary {
+  background-color: white;
+  color: var(--cp);
+  font-family: var(--poppins);
+  font-weight: 500;
+  border: 0px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s;
 
+  svg, path, circle, line, g {
+    stroke: var(--cp);
+    color: var(--cp);
+  }
+  g {
+    fill: var(--cp);
+  }
+}
+
+.secondary:hover {
+  color: white;
+  background-color: var(--cp);
+  svg, path, circle, line, g {
+    stroke: white;
+    color: white;
+  }
+  g {
+    fill: white;
+  }
+}
 
 input.media {
   width: 0.1px;
