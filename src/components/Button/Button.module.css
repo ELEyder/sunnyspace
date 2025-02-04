@@ -8,9 +8,42 @@
   border-radius: 10px;
   cursor: pointer;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s;
+
+  svg, path, circle, line, g {
+    stroke: var(--cp);
+    color: var(--cp);
+  }
+  g {
+    fill: var(--cp);
+  }
 }
 
 .button:hover {
   color: white;
   background-color: var(--cp);
+  svg, path, circle, line, g {
+    stroke: white;
+    color: white;
+  }
+  g {
+    fill: white;
+  }
+}
+
+
+
+input.media {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+label.media {
+  display: flex;
 }
