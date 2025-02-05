@@ -2,41 +2,50 @@ import styles from './Button.module.css';
 
 interface ButtonProps {
   children?: React.ReactNode;
-  type?: "button" | "submit" | "media";
+  type?: "button" | "submit" | "reset";
   onClick?: () => void;
+  setMedia?: (media: File | null) => void;
   block?: boolean;
-  style?: string;
+  variant?: string;
 }
 
 const Button: React.FC<ButtonProps> = (
-  { 
+  {
     children = 'Botón',
     type = undefined,
     onClick = undefined,
     block = false,
-    style = 'primary'
+    variant = 'primary',
+    setMedia
   }) => {
 
-  if (type === 'media') {
+  if (type === 'reset' && setMedia) {
     return (
       <label
-      className={style == 'primary' ? styles.button : styles.secondary}
-      htmlFor="media">
+        className={variant == 'primary' ? styles.button : styles.secondary}
+        htmlFor="media">
         {children}
-        <input type="file" name="media" id="media" className={styles.media} accept=".jpg, .gif, .mp4" />
+        <input type="file" name="media" id="media" className={styles.media} accept=".jpg, .gif, .mp4"
+          onChange={(e) => {
+            if (e.target.files && e.target.files[0]) {
+              const file = e.target.files[0];
+              setMedia(file ?? null);
+            }
+          }} />
       </label>
     )
-  }
-  return (
-    <button
+  } else {
+    return (
+      <button
       type={type}
-      className={style == 'primary' ? styles.button : styles.secondary}
+      className={variant == 'primary' ? styles.button : styles.secondary}
       onClick={onClick}
       {...(block ? { style: { display: 'block', width: '100%' } } : {})}
-    >
+      >
       {children}
     </button>
   )
+}
 }
 
 export default Button;

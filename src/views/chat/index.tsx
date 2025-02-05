@@ -22,7 +22,7 @@ export default function Chat() {
                 <div className={styles.modal}>
                     <div className={styles.modalHeader}>
                         <h1>Your Friends</h1>
-                        <Button onClick={closeOverlay} style='secondary'>
+                        <Button onClick={closeOverlay} variant ='secondary'>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" strokeLinecap="round" strokeWidth="2" />
                                 <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" strokeLinecap="round" strokeWidth="2" />
@@ -84,7 +84,7 @@ export default function Chat() {
 
                 </div>
                 <div className={styles.inputChat}>
-                    <Button type='media' style='secondary'>
+                    <Button type='reset' variant ='secondary'>
                         <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 17.8333L8 12L11.5 15.5L16 9.08333L20.5 17.8333M3 17V7C3 5.89543 3.89543 5 5 5H19C20.1046 5 21 5.89543 21 7V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <circle cx="11" cy="9" r="1" fill="#000000" />

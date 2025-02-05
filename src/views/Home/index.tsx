@@ -6,6 +6,7 @@ import CardUser from '../../components/CardUser/CardUser';
 import { IUser } from '../../interfaces/IUser';
 import { useEffect, useState } from 'react';
 import apiClient from '../../client/apiClient';
+import { IPostForm } from '../../interfaces/IPostFrom';
 
 export default function Home() {
 
@@ -51,6 +52,11 @@ export default function Home() {
         }
     }
 
+    async function onClickPost(data : IPostForm) {
+        await apiClient.post('posts/create', data)   
+        fetchData()
+    }
+
     useEffect(() => {
         fetchData()
     }, [])
@@ -58,7 +64,7 @@ export default function Home() {
     return (
         <>
             <section className={styles.posts}>
-                <FormPost />
+                <FormPost onClick={onClickPost}/>
                 {posts.map((post: IPost, index: number) => (
                     <Post post={post} key={index} onDelete={() => onDelete(post.id)} />
                 ))}

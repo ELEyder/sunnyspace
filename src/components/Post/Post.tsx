@@ -40,12 +40,12 @@ export default function Post({ post, onDelete }: PostProps) {
         <button onClick={onDelete}>Eliminar</button>
             <div className={styles.post}>
                 <div className={styles.postHeader}>
-                    <Avatar onClick={() => navigate(`user/@${post.author}`)} />
+                    <Avatar onClick={() => navigate(`user/@${post.id}`)} />
                     <div className={styles.textContainer}>
                         <p className={styles.text}>
-                            <Link to={`user/@${post.author}`} >
+                            <Link to={`user/@${post.authorN}`} >
                                 <span className={styles.authorName}>
-                                    {post.author}
+                                    {post.authorN} {post.authorL}
                                 </span>
                                 &nbsp;
                                 {post.action}
@@ -66,7 +66,7 @@ export default function Post({ post, onDelete }: PostProps) {
                     <p className={styles.content}> {post.content}</p>
                 </div>
                 <div className={styles.postMedia}>
-                    {post.typeMedia === "img" ? (
+                    {post.typeMedia === "image" ? (
                         <img src={post.urlMedia} alt="" className={styles.media} />
                     ) : post.typeMedia === "video" ? (
                         <video controls className={styles.media}>
