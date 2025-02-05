@@ -8,7 +8,7 @@
     position: sticky;
     top: 0;
     border-bottom: 1px solid #d3d3d3;
-    z-index: 10; /* Z-index más bajo */
+    z-index: 20; /* Z-index más bajo */
 }
 .home {
     display: flex;
