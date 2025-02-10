@@ -7,6 +7,7 @@ import FormComment from '../FormComment/FormComment';
 import Avatar from '../Avatar/Avatar';
 
 import styles from './Post.module.css';
+import Button from '../Button/Button';
 interface PostProps {
     post: IPost,
     onDelete: () => void,
@@ -37,7 +38,7 @@ export default function Post({ post, onDelete }: PostProps) {
 
     return (
         <>
-        <button onClick={onDelete}>Eliminar</button>
+        <Button onClick={onDelete}>Eliminar</Button>
             <div className={styles.post}>
                 <div className={styles.postHeader}>
                     <Avatar onClick={() => navigate(`user/@${post.id}`)} />
